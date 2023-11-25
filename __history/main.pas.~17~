@@ -1,0 +1,97 @@
+unit main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Cryptor, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.Menus, Vcl.ExtDlgs;
+
+type
+  TForm1 = class(TForm)
+    InputString: TEdit;
+    LabelInput: TLabel;
+    ResultString: TEdit;
+    LabelOutput: TLabel;
+    ButtonCrypt: TButton;
+    ButtonDecrypt: TButton;
+    InputOffset: TEdit;
+    LabelOffset: TLabel;
+    UpDownOffset: TUpDown;
+    OpenTextFileDialog: TOpenTextFileDialog;
+    SaveTextFileDialog: TSaveTextFileDialog;
+    MainMenu: TMainMenu;
+    FileMenu: TMenuItem;
+    NewFile: TMenuItem;
+    OpenFile: TMenuItem;
+    SaveFile: TMenuItem;
+    procedure ButtonCryptClick(Sender: TObject);
+    procedure ButtonDecryptClick(Sender: TObject);
+    procedure NewFileClick(Sender: TObject);
+    procedure OpenFileClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+///<summary>
+///Обработчик события для кнопки Зашифровать
+///</summary>
+procedure TForm1.ButtonCryptClick(Sender: TObject);
+var
+ i: integer;
+begin
+    ResultString.Text := ChesarCrypt(InputString.text, StrToInt(InputOffset.text));
+end;
+///<summary>
+///Обработчик события для кнопки Расшифровать
+///</summary>
+procedure TForm1.ButtonDecryptClick(Sender: TObject);
+begin
+   ResultString.Text := ChesarDecrypt(InputString.text, StrToInt(InputOffset.text));
+end;
+///<summary>
+///Обработчик пункта главного меню создать
+///</summary>
+procedure TForm1.NewFileClick(Sender: TObject);
+begin
+  InputString.Text := '';
+  ResultString.Text := '';
+  InputOffset.Text := '0'
+end;
+///<summary>
+///Обработчик пункта главного открыть файл
+///</summary>
+procedure TForm1.OpenFileClick(Sender: TObject);
+var
+  InputFile: TextFile;
+  BufferSym: char;
+  NameOfFile: string;
+begin
+   {if OpenTextFileDialog.Execute then
+    NameOfFile := OpenTextFileDialog.FileName;
+   OpenTextFileDialog.Free;     }
+   NameOfFile := 'C:\Users\Григорий\Desktop\code\res\test.txt';
+     if NameOfFile <> '' then begin
+      AssignFile(InputFile, NameOfFile);
+      InputString.Text := '';
+
+      while not eof(InputFile) do begin
+        read(InputFile, BufferSym);
+        if not eoln(InputFile) then
+          InputString.Text := InputString.Text + BufferSym;
+      end;
+      CloseFile(InputFile);
+     end;
+
+
+end;
+
+end.

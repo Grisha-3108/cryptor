@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.102,C:\Users\Григорий\Desktop\code\main.dfm=C:\Users\Григорий\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.049,C:\Users\Григорий\Desktop\code\FileCryptForm.pas=C:\Users\Григорий\Desktop\code\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\FileCryptForm\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.924,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\Cryptor\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.346,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,C:\Users\Григорий\Desktop\code\main.pas=C:\Users\Григорий\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.534,=C:\Users\Григорий\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.890,C:\Users\Григорий\Desktop\code\Cryptor.pas=C:\Users\Григорий\Desktop\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.732,C:\Users\Григорий\Desktop\code\Chesar.dproj=C:\Users\Григорий\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.389,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\main\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.202,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.456,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\Chesar\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.345,=C:\Users\Григорий\Desktop\code\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.040,=C:\Users\Григорий\Desktop\code\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.840,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\Chesar\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.902,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\main\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.408,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\Cryptor\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.049,C:\Users\Григорий\Desktop\code\FileCryptForm.dfm=C:\Users\Григорий\Desktop\code\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\FileCryptForm\default.txvpck</Transaction>
+    <Transaction>2023.11.25 17:49:28.614,=C:\Users\Григорий\Desktop\code\ModelSupport_Chesar\Class Diagram.txvcls</Transaction>
+    <Transaction>2023.11.25 17:49:45.112,c:\users\григорий\desktop\code\modelsupport_chesar\class diagram.txvcls=</Transaction>
+  </Transactions>
+</BorlandProject>

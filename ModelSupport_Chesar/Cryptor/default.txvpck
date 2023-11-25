@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="xpytra089dq_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Chesar:Cryptor.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:Chesar:Cryptor.@unitclass.ChesarCrypt(System.string,System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:Cryptor.@unitclass.ChesarDecrypt(System.string,System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:Cryptor.@unitclass.FileCrypt(System.string,System.string,System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:Cryptor.@unitclass.FileDecrypt(System.string,System.string,System.Integer)" />
+    </reference>
+  </view>
+</nodeSet>

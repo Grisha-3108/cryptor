@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="12gcfhlzb4n_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Chesar:main.TForm1">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.InputString" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.LabelInput" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.ResultString" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.LabelOutput" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.ButtonCrypt" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.ButtonDecrypt" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.InputOffset" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.LabelOffset" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.UpDownOffset" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.ButtonCryptClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.ButtonDecryptClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.OpenTextFileDialog" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.SaveTextFileDialog" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.MainMenu" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.FileMenu" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.NewFile" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.OpenFile" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.SaveFile" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.MenuHelp" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.AboutProgram" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.NewFileClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.OpenFileClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.SaveFileClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.AboutProgramClick(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.TForm1.MenuFileCpypt" />
+      <reference referencedUin="delphi:e_method:src:Chesar:main.TForm1.MenuFileCpyptClick(System.TObject)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Chesar:main.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:Chesar:main.@unitclass.Form1" />
+      <reference referencedUin="delphi:e_field:src:Chesar:main.@unitclass.Form1" />
+    </reference>
+  </view>
+</nodeSet>

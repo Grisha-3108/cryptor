@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="Gendoc.Images" Type="System.Boolean" Value="True" Category="General" IsBrowsable="False" />
+  <Option Name="Gendoc.NavigationTree" Type="System.Boolean" Value="True" Category="General" IsBrowsable="False" />
+  <Option Name="Gendoc.LaunchBrowser" Type="System.Boolean" Value="True" Category="General" IsBrowsable="False" />
+  <Option Name="Gendoc.OutputFolder" Type="System.String" Value="C:\Users\Григорий\Desktop\code\doc" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Cryptor" Type="System.String" Value="Cryptor" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.main" Type="System.String" Value="main" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Chesar" Type="System.String" Value="Chesar" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.FileCryptForm" Type="System.String" Value="FileCryptForm" Category="General" IsBrowsable="False" />
+</TgConfig>

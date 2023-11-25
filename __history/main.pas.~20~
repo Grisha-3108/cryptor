@@ -1,0 +1,123 @@
+unit main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Cryptor, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.Menus, Vcl.ExtDlgs;
+
+type
+  TForm1 = class(TForm)
+    InputString: TEdit;
+    LabelInput: TLabel;
+    ResultString: TEdit;
+    LabelOutput: TLabel;
+    ButtonCrypt: TButton;
+    ButtonDecrypt: TButton;
+    InputOffset: TEdit;
+    LabelOffset: TLabel;
+    UpDownOffset: TUpDown;
+    OpenTextFileDialog: TOpenTextFileDialog;
+    SaveTextFileDialog: TSaveTextFileDialog;
+    MainMenu: TMainMenu;
+    FileMenu: TMenuItem;
+    NewFile: TMenuItem;
+    OpenFile: TMenuItem;
+    SaveFile: TMenuItem;
+    MenuHelp: TMenuItem;
+    AboutProgram: TMenuItem;
+    procedure ButtonCryptClick(Sender: TObject);
+    procedure ButtonDecryptClick(Sender: TObject);
+    procedure NewFileClick(Sender: TObject);
+    procedure OpenFileClick(Sender: TObject);
+    procedure SaveFileClick(Sender: TObject);
+    procedure AboutProgramClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+///<summary>
+///Обработчик события для кнопки О программе
+///</summary>
+procedure TForm1.AboutProgramClick(Sender: TObject);
+begin
+   MessageDlg('Реализация алгоритма шифрования Цезаря Петуховым Григорием. Программа просит вас' +
+   ' принять её и поставить оценку!', mtInformation, [mbOk], 0);
+end;
+///<summary>
+///Обработчик события для кнопки Зашифровать
+///</summary>
+procedure TForm1.ButtonCryptClick(Sender: TObject);
+var
+ i: integer;
+begin
+    ResultString.Text := ChesarCrypt(InputString.text, StrToInt(InputOffset.text));
+end;
+///<summary>
+///Обработчик события для кнопки Расшифровать
+///</summary>
+procedure TForm1.ButtonDecryptClick(Sender: TObject);
+begin
+   ResultString.Text := ChesarDecrypt(InputString.text, StrToInt(InputOffset.text));
+end;
+///<summary>
+///Обработчик пункта главного меню создать
+///</summary>
+procedure TForm1.NewFileClick(Sender: TObject);
+begin
+  InputString.Text := '';
+  ResultString.Text := '';
+  InputOffset.Text := '0'
+end;
+///<summary>
+///Обработчик пункта главного меню открыть файл
+///</summary>
+procedure TForm1.OpenFileClick(Sender: TObject);
+var
+  InputFile: TextFile;
+  BufferString: String;
+  NameOfFile: string;
+begin
+   if OpenTextFileDialog.Execute then
+    NameOfFile := OpenTextFileDialog.FileName;
+
+     if NameOfFile <> '' then begin
+      AssignFile(InputFile, NameOfFile);
+      InputString.Text := '';
+      Reset(InputFile);
+
+      while not eof(InputFile) do begin
+        readln(InputFile, BufferString);
+        InputString.Text := InputString.Text + BufferString;
+      end;
+      CloseFile(InputFile);
+
+     end;
+
+
+end;
+///<summary>
+///Обработчик пункта главного меню сохранить файл
+///</summary>
+procedure TForm1.SaveFileClick(Sender: TObject);
+var
+  FileOut: TextFile;
+begin
+  if SaveTextFileDialog.Execute then begin
+    AssignFile(FileOut, SaveTextFileDialog.FileName + '.txt');
+    Rewrite(FileOut);
+    write(FileOut, ResultString.Text);
+    CloseFile(FileOut);
+  end;
+end;
+
+end.

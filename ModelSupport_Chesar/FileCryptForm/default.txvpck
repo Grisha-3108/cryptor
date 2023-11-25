@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="d7dh7z4n3mo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:Chesar:FileCryptForm.TForm2">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.ButtonOK" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.ButtonCancel" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.Panel1" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelInfo" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelIn" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelOut" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelPathIn" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelPathOut" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.EditOffset" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.LabelOffset" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.UpDownFileOffset" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.OpenFileCrypted" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.SaveFileCrypted" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.ButtonSelectInFile" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.TForm2.ButtonSelectOutFile" />
+      <reference referencedUin="delphi:e_method:src:Chesar:FileCryptForm.TForm2.ButtonSelectInFileClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:Chesar:FileCryptForm.TForm2.ButtonSelectOutFileClick(System.TObject)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:Chesar:FileCryptForm.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:l_ast:src:Chesar:FileCryptForm.@unitclass.Form2" />
+      <reference referencedUin="delphi:e_field:src:Chesar:FileCryptForm.@unitclass.Form2" />
+    </reference>
+  </view>
+</nodeSet>

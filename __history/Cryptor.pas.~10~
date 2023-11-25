@@ -1,0 +1,137 @@
+unit Cryptor;
+
+interface
+  function ChesarCrypt(input: string; offset: longint): string;
+  function ChesarDecrypt(input: string; offset: longint): string;
+  procedure FileCrypt(InFile, OutFile: string; offset: integer);
+  procedure FileDecrypt(InFile, OutFile: string; offset: integer);
+implementation
+  ///<summary>
+  ///Шифрует строку методом Цезаря
+  ///</summary>
+  ///<param name="input">
+  ///Входная строка
+  ///</param>
+  ///<param name="offset">
+  ///Сдвиг при шифровании
+  ///</param>
+  ///<returns>
+  ///Зашифрованная строка
+  ///</returs>
+  function ChesarCrypt(input: string; offset: longint): string;
+  const
+   NUM_Of_SYMBOLS = 65535;
+  var
+    output: string;
+    counter, StrLen: integer;
+  begin
+    if offset >  NUM_OF_SYMBOLS then
+      offset := offset mod 65535;
+
+    StrLen := Length(input);
+
+    for counter := 1 to StrLen do begin
+      output := output + chr((ord(input[counter]) + offset) mod NUM_OF_SYMBOLS);
+    end;
+
+    ChesarCrypt := output
+  end;
+  ///<summary>
+  ///Расшифровывает строку методом Цезаря
+  ///</summary>
+  ///<param name="input">
+  ///Входная строка
+  ///</param>
+  ///<param name="offset">
+  ///Сдвиг при шифровании
+  ///</param>
+  ///<returns>
+  ///Расшифрованная строка
+  ///</returs>
+  function ChesarDecrypt(input: string; offset: longint): string;
+  const
+   NUM_Of_SYMBOLS = 65535;
+  var
+    output: string;
+    counter, StrLen: integer;
+  begin
+    if offset >  NUM_OF_SYMBOLS then
+      offset := offset mod 65535;
+
+    StrLen := Length(input);
+
+    for counter := 1 to StrLen do begin
+      output := output + chr((ord(input[counter]) + NUM_OF_SYMBOLS - offset) mod NUM_OF_SYMBOLS);
+    end;
+
+    ChesarDecrypt := output
+  end;
+///<summary>
+///Шифрует файл методом Цезаря
+///</summary>
+///<param name="InFile">
+///Входная файл
+///</param>
+///<param name="offset">
+///Сдвиг при шифровании
+///</param>
+///<param name="OutFile">
+///Файл-результат
+///</param>
+///<returns>
+///Зашифрованный файл
+///</returs>
+procedure FileCrypt(InFile, OutFile: string; offset: longint);
+var
+  FileInput, FileOutput: file of byte;
+  Buffer: byte;
+begin
+  if offset > 255 then
+    offset := offset mod 256;
+  AssignFile(FileInput, InFile);
+  AssignFile(FileOutput, OutFile);
+  Reset(FileInput);
+  Rewrite(FileOutput);
+  while not eof(FileInput) do begin
+    read(FileInput, Buffer);
+    Buffer := (Buffer + offset) mod 256;
+    write(FileOutput, Buffer);
+  end;
+  CloseFile(FileInput);
+  CloseFile(FileOutput);
+end;
+///<summary>
+///Дешиифрует файл методом Цезаря
+///</summary>
+///<param name="InFile">
+///Входная файл
+///</param>
+///<param name="offset">
+///Сдвиг при шифровании
+///</param>
+///<param name="OutFile">
+///Файл-результат
+///</param>
+///<returns>
+///Зашифрованный файл
+///</returs>
+procedure FileDecrypt(InFile, OutFile: string; offset: longint);
+var
+  FileInput, FileOutput: file of byte;
+  Buffer: byte;
+begin
+  if offset > 255 then
+    offset := offset mod 256;
+  AssignFile(FileInput, InFile);
+  AssignFile(FileOutput, OutFile);
+  Reset(FileInput);
+  Rewrite(FileOutput);
+  while not eof(FileInput) do begin
+    read(FileInput, Buffer);
+    Buffer := (Buffer + 256 - offset) mod 256;
+    write(FileOutput, Buffer);
+  end;
+  CloseFile(FileInput);
+  CloseFile(FileOutput);
+end;
+end.

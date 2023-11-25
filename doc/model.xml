@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="Chesar" id="Chesar" language="delphi">
+  <DesignElement name="ResultString" id="ID=14" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="ChesarCrypt" id="ID=10" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=157" metaclass="Dependency Link" idref="ID=14">
+      <Property name="Supplier">ResultString</Property>
+      <Property name="Client">ChesarCrypt</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Кнопка Зашифровать!" id="ID=8" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=153" metaclass="Dependency Link" idref="ID=10">
+      <Property name="Supplier">ChesarCrypt</Property>
+      <Property name="Client">Кнопка Зашифровать!</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="ChesarDecrypt" id="ID=11" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=159" metaclass="Dependency Link" idref="ID=14">
+      <Property name="Supplier">ResultString</Property>
+      <Property name="Client">ChesarDecrypt</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Кнопка расшифровать!" id="ID=9" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=155" metaclass="Dependency Link" idref="ID=11">
+      <Property name="Supplier">ChesarDecrypt</Property>
+      <Property name="Client">Кнопка расшифровать!</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="FileCpypt" id="ID=33" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="FileDecrypt" id="ID=34" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="Form2" id="ID=28" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=238" metaclass="Dependency Link" idref="ID=33">
+      <Property name="Supplier">FileCpypt</Property>
+      <Property name="Client">Form2</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=239" metaclass="Dependency Link" idref="ID=34">
+      <Property name="Supplier">FileDecrypt</Property>
+      <Property name="Client">Form2</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Зашифровать/расшифровать файл" id="ID=29" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=242" metaclass="Dependency Link" idref="ID=28">
+      <Property name="Supplier">Form2</Property>
+      <Property name="Client">Зашифровать/расшифровать файл</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Form1" id="ID=7" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=147" metaclass="Dependency Link" idref="ID=8">
+      <Property name="Supplier">Кнопка Зашифровать!</Property>
+      <Property name="Client">Form1</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=148" metaclass="Dependency Link" idref="ID=9">
+      <Property name="Supplier">Кнопка расшифровать!</Property>
+      <Property name="Client">Form1</Property>
+    </Link>
+    <Link targetName="Dependency Link3" id="ID=149" metaclass="Dependency Link" idref="ID=29">
+      <Property name="Supplier">Зашифровать/расшифровать файл</Property>
+      <Property name="Client">Form1</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="InputString" id="ID=12" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=161" metaclass="Dependency Link" idref="ID=10">
+      <Property name="Supplier">ChesarCrypt</Property>
+      <Property name="Client">InputString</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=162" metaclass="Dependency Link" idref="ID=11">
+      <Property name="Supplier">ChesarDecrypt</Property>
+      <Property name="Client">InputString</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="InputOffset" id="ID=13" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=165" metaclass="Dependency Link" idref="ID=10">
+      <Property name="Supplier">ChesarCrypt</Property>
+      <Property name="Client">InputOffset</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=166" metaclass="Dependency Link" idref="ID=11">
+      <Property name="Supplier">ChesarDecrypt</Property>
+      <Property name="Client">InputOffset</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Обработчик нового файла" id="ID=23" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="Новый" id="ID=17" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=179" metaclass="Dependency Link" idref="ID=23">
+      <Property name="Supplier">Обработчик нового файла</Property>
+      <Property name="Client">Новый</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Обработчки открытия" id="ID=22" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="Открыть" id="ID=18" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=181" metaclass="Dependency Link" idref="ID=22">
+      <Property name="Supplier">Обработчки открытия</Property>
+      <Property name="Client">Открыть</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Обработчик сохранения" id="ID=24" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="Сохранить" id="ID=19" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=183" metaclass="Dependency Link" idref="ID=24">
+      <Property name="Supplier">Обработчик сохранения</Property>
+      <Property name="Client">Сохранить</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Файл" id="ID=16" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=173" metaclass="Dependency Link" idref="ID=17">
+      <Property name="Supplier">Новый</Property>
+      <Property name="Client">Файл</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=174" metaclass="Dependency Link" idref="ID=18">
+      <Property name="Supplier">Открыть</Property>
+      <Property name="Client">Файл</Property>
+    </Link>
+    <Link targetName="Dependency Link3" id="ID=175" metaclass="Dependency Link" idref="ID=19">
+      <Property name="Supplier">Сохранить</Property>
+      <Property name="Client">Файл</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Вывод сообщения" id="ID=25" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+  </DesignElement>
+  <DesignElement name="О программе" id="ID=21" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=187" metaclass="Dependency Link" idref="ID=25">
+      <Property name="Supplier">Вывод сообщения</Property>
+      <Property name="Client">О программе</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Помощь" id="ID=20" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=185" metaclass="Dependency Link" idref="ID=21">
+      <Property name="Supplier">О программе</Property>
+      <Property name="Client">Помощь</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="MainMenu" id="ID=15" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=169" metaclass="Dependency Link" idref="ID=16">
+      <Property name="Supplier">Файл</Property>
+      <Property name="Client">MainMenu</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=170" metaclass="Dependency Link" idref="ID=20">
+      <Property name="Supplier">Помощь</Property>
+      <Property name="Client">MainMenu</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Диалог открытия" id="ID=26" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=189" metaclass="Dependency Link" idref="ID=22">
+      <Property name="Supplier">Обработчки открытия</Property>
+      <Property name="Client">Диалог открытия</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Диалог сохранения" id="ID=27" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=191" metaclass="Dependency Link" idref="ID=24">
+      <Property name="Supplier">Обработчик сохранения</Property>
+      <Property name="Client">Диалог сохранения</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Исходный файл" id="ID=30" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=244" metaclass="Dependency Link" idref="ID=34">
+      <Property name="Supplier">FileDecrypt</Property>
+      <Property name="Client">Исходный файл</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=245" metaclass="Dependency Link" idref="ID=33">
+      <Property name="Supplier">FileCpypt</Property>
+      <Property name="Client">Исходный файл</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Файл-результат" id="ID=31" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=248" metaclass="Dependency Link" idref="ID=34">
+      <Property name="Supplier">FileDecrypt</Property>
+      <Property name="Client">Файл-результат</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="Сдвиг" id="ID=32" metaclass="Object">
+    <Property name="Concurrent">False</Property>
+    <Property name="Active">False</Property>
+    <Property name="MultipleInstance">False</Property>
+    <Link targetName="Dependency Link1" id="ID=250" metaclass="Dependency Link" idref="ID=34">
+      <Property name="Supplier">FileDecrypt</Property>
+      <Property name="Client">Сдвиг</Property>
+    </Link>
+    <Link targetName="Dependency Link2" id="ID=251" metaclass="Dependency Link" idref="ID=33">
+      <Property name="Supplier">FileCpypt</Property>
+      <Property name="Client">Сдвиг</Property>
+    </Link>
+  </DesignElement>
+  <Diagram name="default" id="ID=35" metaclass="Namespace Diagram" file="default.txvpck.html">
+    <Property name="defaultDiagram">true</Property>
+    <DiagramReference id="ID=37" element="ID=5" metaclass="Namespace">
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">120,100,220,234</Property>
+      <DiagramReference id="ID=71" element="ID=69" metaclass="Module" />
+    </DiagramReference>
+    <DiagramReference id="ID=38" element="ID=3" metaclass="Namespace">
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">360,80,460,231</Property>
+      <DiagramReference id="ID=75" element="ID=73" metaclass="Class">
+        <Property name="Persistent">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Sealed">False</Property>
+        <Property name="Extends">Vcl.Forms.TForm</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=76" element="ID=72" metaclass="Module" />
+    </DiagramReference>
+    <DiagramReference id="ID=39" element="ID=4" metaclass="Namespace">
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">240,100,340,234</Property>
+      <DiagramReference id="ID=142" element="ID=140" metaclass="Module" />
+    </DiagramReference>
+    <DiagramReference id="ID=40" element="ID=7" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">120,400,171,426</Property>
+      <DiagramReference id="ID=150" element="ID=147" metaclass="Dependency Link">
+        <Property name="Supplier">Кнопка Зашифровать!</Property>
+        <Property name="Client">Form1</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=151" element="ID=148" metaclass="Dependency Link">
+        <Property name="Supplier">Кнопка расшифровать!</Property>
+        <Property name="Client">Form1</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=152" element="ID=149" metaclass="Dependency Link">
+        <Property name="Supplier">Зашифровать/расшифровать файл</Property>
+        <Property name="Client">Form1</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=41" element="ID=8" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">260,420,409,446</Property>
+      <DiagramReference id="ID=154" element="ID=153" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarCrypt</Property>
+        <Property name="Client">Кнопка Зашифровать!</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=42" element="ID=9" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">260,500,414,526</Property>
+      <DiagramReference id="ID=156" element="ID=155" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarDecrypt</Property>
+        <Property name="Client">Кнопка расшифровать!</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=43" element="ID=10" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">600,360,687,386</Property>
+      <DiagramReference id="ID=158" element="ID=157" metaclass="Dependency Link">
+        <Property name="Supplier">ResultString</Property>
+        <Property name="Client">ChesarCrypt</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=44" element="ID=11" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">560,460,660,486</Property>
+      <DiagramReference id="ID=160" element="ID=159" metaclass="Dependency Link">
+        <Property name="Supplier">ResultString</Property>
+        <Property name="Client">ChesarDecrypt</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=45" element="ID=12" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">220,300,297,326</Property>
+      <DiagramReference id="ID=163" element="ID=161" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarCrypt</Property>
+        <Property name="Client">InputString</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=164" element="ID=162" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarDecrypt</Property>
+        <Property name="Client">InputString</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=46" element="ID=13" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">340,300,418,326</Property>
+      <DiagramReference id="ID=167" element="ID=165" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarCrypt</Property>
+        <Property name="Client">InputOffset</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=168" element="ID=166" metaclass="Dependency Link">
+        <Property name="Supplier">ChesarDecrypt</Property>
+        <Property name="Client">InputOffset</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=47" element="ID=14" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">520,280,605,306</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=48" element="ID=15" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">220,580,294,606</Property>
+      <DiagramReference id="ID=171" element="ID=169" metaclass="Dependency Link">
+        <Property name="Supplier">Файл</Property>
+        <Property name="Client">MainMenu</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=172" element="ID=170" metaclass="Dependency Link">
+        <Property name="Supplier">Помощь</Property>
+        <Property name="Client">MainMenu</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=49" element="ID=16" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">380,560,427,586</Property>
+      <DiagramReference id="ID=176" element="ID=173" metaclass="Dependency Link">
+        <Property name="Supplier">Новый</Property>
+        <Property name="Client">Файл</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=177" element="ID=174" metaclass="Dependency Link">
+        <Property name="Supplier">Открыть</Property>
+        <Property name="Client">Файл</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=178" element="ID=175" metaclass="Dependency Link">
+        <Property name="Supplier">Сохранить</Property>
+        <Property name="Client">Файл</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=50" element="ID=17" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">520,540,574,566</Property>
+      <DiagramReference id="ID=180" element="ID=179" metaclass="Dependency Link">
+        <Property name="Supplier">Обработчик нового файла</Property>
+        <Property name="Client">Новый</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=51" element="ID=18" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">500,600,566,626</Property>
+      <DiagramReference id="ID=182" element="ID=181" metaclass="Dependency Link">
+        <Property name="Supplier">Обработчки открытия</Property>
+        <Property name="Client">Открыть</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=52" element="ID=19" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">500,640,578,666</Property>
+      <DiagramReference id="ID=184" element="ID=183" metaclass="Dependency Link">
+        <Property name="Supplier">Обработчик сохранения</Property>
+        <Property name="Client">Сохранить</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=53" element="ID=20" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">360,700,424,726</Property>
+      <DiagramReference id="ID=186" element="ID=185" metaclass="Dependency Link">
+        <Property name="Supplier">О программе</Property>
+        <Property name="Client">Помощь</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=54" element="ID=21" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">620,680,713,706</Property>
+      <DiagramReference id="ID=188" element="ID=187" metaclass="Dependency Link">
+        <Property name="Supplier">Вывод сообщения</Property>
+        <Property name="Client">О программе</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=55" element="ID=22" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">760,520,906,546</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=56" element="ID=23" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">780,580,953,606</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=57" element="ID=24" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">780,640,940,666</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=58" element="ID=25" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">800,700,923,726</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=59" element="ID=26" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">1000,420,1117,446</Property>
+      <DiagramReference id="ID=190" element="ID=189" metaclass="Dependency Link">
+        <Property name="Supplier">Обработчки открытия</Property>
+        <Property name="Client">Диалог открытия</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=60" element="ID=27" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">980,560,1111,586</Property>
+      <DiagramReference id="ID=192" element="ID=191" metaclass="Dependency Link">
+        <Property name="Supplier">Обработчик сохранения</Property>
+        <Property name="Client">Диалог сохранения</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=61" element="ID=6" metaclass="Namespace">
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">498,43,632,194</Property>
+      <DiagramReference id="ID=196" element="ID=193" metaclass="Class">
+        <Property name="Persistent">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Sealed">False</Property>
+        <Property name="Extends">Vcl.Forms.TForm</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=197" element="ID=194" metaclass="Module" />
+    </DiagramReference>
+    <DiagramReference id="ID=62" element="ID=28" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">120,640,171,666</Property>
+      <DiagramReference id="ID=240" element="ID=238" metaclass="Dependency Link">
+        <Property name="Supplier">FileCpypt</Property>
+        <Property name="Client">Form2</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=241" element="ID=239" metaclass="Dependency Link">
+        <Property name="Supplier">FileDecrypt</Property>
+        <Property name="Client">Form2</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=63" element="ID=29" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">20,520,246,546</Property>
+      <DiagramReference id="ID=243" element="ID=242" metaclass="Dependency Link">
+        <Property name="Supplier">Form2</Property>
+        <Property name="Client">Зашифровать/расшифровать файл</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=64" element="ID=30" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">20,700,130,726</Property>
+      <DiagramReference id="ID=246" element="ID=244" metaclass="Dependency Link">
+        <Property name="Supplier">FileDecrypt</Property>
+        <Property name="Client">Исходный файл</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=247" element="ID=245" metaclass="Dependency Link">
+        <Property name="Supplier">FileCpypt</Property>
+        <Property name="Client">Исходный файл</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=65" element="ID=31" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">140,780,251,806</Property>
+      <DiagramReference id="ID=249" element="ID=248" metaclass="Dependency Link">
+        <Property name="Supplier">FileDecrypt</Property>
+        <Property name="Client">Файл-результат</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=66" element="ID=32" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">260,720,310,746</Property>
+      <DiagramReference id="ID=252" element="ID=250" metaclass="Dependency Link">
+        <Property name="Supplier">FileDecrypt</Property>
+        <Property name="Client">Сдвиг</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=253" element="ID=251" metaclass="Dependency Link">
+        <Property name="Supplier">FileCpypt</Property>
+        <Property name="Client">Сдвиг</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=67" element="ID=33" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">320,780,389,806</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=68" element="ID=34" metaclass="Object">
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Concurrent">False</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Active">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="MultipleInstance">False</Property>
+      <Property name="bounds">460,780,540,806</Property>
+    </DiagramReference>
+  </Diagram>
+  <Package name="Chesar" id="ID=5">
+    <Diagram name="Chesar" id="ID=70" metaclass="Namespace Diagram" file="default.txvpck.html">
+      <Property name="defaultDiagram">true</Property>
+      <DiagramReference id="ID=254" element="ID=69" metaclass="Module">
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient ON">False</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+      </DiagramReference>
+    </Diagram>
+    <Classifier name="globals Chesar" id="ID=69" type="Module" visibility="public">
+      <Uses />
+    </Classifier>
+  </Package>
+  <Package name="main" id="ID=3">
+    <Diagram name="main" id="ID=74" metaclass="Namespace Diagram" file="default.txvpck.html">
+      <Property name="defaultDiagram">true</Property>
+      <DiagramReference id="ID=255" element="ID=73" metaclass="Class">
+        <Property name="Gradient ON">False</Property>
+        <Property name="Persistent">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Sealed">False</Property>
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Extends">Vcl.Forms.TForm</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=256" element="ID=72" metaclass="Module">
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient ON">False</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+        <DiagramReference id="ID=284" element="ID=139" metaclass="Association Link">
+          <Property name="Type">association</Property>
+          <Property name="Directed">False</Property>
+          <Property name="Supplier">TForm1</Property>
+          <Property name="Client">Form1</Property>
+        </DiagramReference>
+      </DiagramReference>
+    </Diagram>
+    <Classifier name="TForm1" id="ID=73" type="Class" visibility="public">
+      <Property name="Persistent">False</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Sealed">False</Property>
+      <Property name="Extends">Vcl.Forms.TForm</Property>
+      <Extends idref="ID=105" refFN="Vcl.Forms.TForm" doom="true" />
+      <Uses>
+        <Use element="ID=138" type="field_type" />
+      </Uses>
+      <Field fieldType="Field" elementName="InputString" id="ID=77" type="TEdit" systemType="TEdit" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TEdit</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelInput" id="ID=78" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ResultString" id="ID=79" type="TEdit" systemType="TEdit" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TEdit</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelOutput" id="ID=80" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ButtonCrypt" id="ID=81" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ButtonDecrypt" id="ID=82" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Field fieldType="Field" elementName="InputOffset" id="ID=83" type="TEdit" systemType="TEdit" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TEdit</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelOffset" id="ID=84" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="UpDownOffset" id="ID=85" type="TUpDown" systemType="TUpDown" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TUpDown</Property>
+      </Field>
+      <Field fieldType="Field" elementName="OpenTextFileDialog" id="ID=86" type="TOpenTextFileDialog" systemType="TOpenTextFileDialog" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TOpenTextFileDialog</Property>
+      </Field>
+      <Field fieldType="Field" elementName="SaveTextFileDialog" id="ID=87" type="TSaveTextFileDialog" systemType="TSaveTextFileDialog" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TSaveTextFileDialog</Property>
+      </Field>
+      <Field fieldType="Field" elementName="MainMenu" id="ID=88" type="TMainMenu" systemType="TMainMenu" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMainMenu</Property>
+      </Field>
+      <Field fieldType="Field" elementName="FileMenu" id="ID=89" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="NewFile" id="ID=90" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="OpenFile" id="ID=91" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="SaveFile" id="ID=92" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="MenuHelp" id="ID=93" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="AboutProgram" id="ID=94" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Field fieldType="Field" elementName="MenuFileCpypt" id="ID=95" type="TMenuItem" systemType="TMenuItem" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TMenuItem</Property>
+      </Field>
+      <Method id="ID=96" name="ButtonCryptClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=96_11898821" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик события для кнопки Зашифровать&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=96" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=97" name="ButtonDecryptClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=97_24280426" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик события для кнопки Расшифровать&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=97" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=98" name="NewFileClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=98_20557504" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик пункта главного меню создать&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=98" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=99" name="OpenFileClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=99_54545134" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик пункта главного меню открыть файл&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=99" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=100" name="SaveFileClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=100_56079773" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик пункта главного меню сохранить файл&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=100" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=101" name="AboutProgramClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=101_46167797" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик события для кнопки О программе&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=101" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=102" name="MenuFileCpyptClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=102_48604061" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик пункта главного меню Зашифровать файл&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=102" type="" isPrimitive="true" />
+      </Method>
+    </Classifier>
+    <Classifier name="globals main" id="ID=72" type="Module" visibility="public">
+      <Link targetName="Form1" id="ID=139" metaclass="Association Link" idref="ID=73">
+        <Property name="Type">association</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Supplier">TForm1</Property>
+        <Property name="Client">Form1</Property>
+      </Link>
+      <Uses />
+      <Field fieldType="Field" elementName="Form1" id="ID=138" typeref="ID=73" type="TForm1" isPrimitive="false" visibility="internal">
+        <Property name="Const">False</Property>
+        <Property name="Type">TForm1</Property>
+      </Field>
+    </Classifier>
+  </Package>
+  <Package name="Cryptor" id="ID=4">
+    <Diagram name="Cryptor" id="ID=141" metaclass="Namespace Diagram" file="default.txvpck.html">
+      <Property name="defaultDiagram">true</Property>
+      <DiagramReference id="ID=287" element="ID=140" metaclass="Module">
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient ON">False</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+      </DiagramReference>
+    </Diagram>
+    <Classifier name="globals Cryptor" id="ID=140" type="Module" visibility="public">
+      <Uses />
+      <Method id="ID=143" name="ChesarCrypt" visibility="public">
+        <Parameter elementName="input" id="ID3=143_46410096" type="string" isPrimitive="true" />
+        <Parameter elementName="offset" id="ID3=143_10092597" type="longint" systemType="Longint" isPrimitive="false" />
+        <Property name="Returns">string</Property>
+        <ReturnType id="ID=143" type="string" isPrimitive="true" />
+      </Method>
+      <Method id="ID=144" name="ChesarDecrypt" visibility="public">
+        <Parameter elementName="input" id="ID3=144_12194051" type="string" isPrimitive="true" />
+        <Parameter elementName="offset" id="ID3=144_48194049" type="longint" systemType="Longint" isPrimitive="false" />
+        <Property name="Returns">string</Property>
+        <ReturnType id="ID=144" type="string" isPrimitive="true" />
+      </Method>
+      <Method id="ID=145" name="FileCrypt" isSubroutine="true" visibility="public">
+        <ReturnType id="ID=145" type="" isPrimitive="true" />
+        <Parameter elementName="InFile" id="ID3=145_11403863" type="string" isPrimitive="true" />
+        <Parameter elementName="OutFile" id="ID3=145_51297710" type="string" isPrimitive="true" />
+        <Parameter elementName="offset" id="ID3=145_16393628" type="integer" systemType="Integer" isPrimitive="false" />
+      </Method>
+      <Method id="ID=146" name="FileDecrypt" isSubroutine="true" visibility="public">
+        <ReturnType id="ID=146" type="" isPrimitive="true" />
+        <Parameter elementName="InFile" id="ID3=146_52815467" type="string" isPrimitive="true" />
+        <Parameter elementName="OutFile" id="ID3=146_50194423" type="string" isPrimitive="true" />
+        <Parameter elementName="offset" id="ID3=146_39216423" type="integer" systemType="Integer" isPrimitive="false" />
+      </Method>
+    </Classifier>
+  </Package>
+  <Package name="FileCryptForm" id="ID=6">
+    <Diagram name="FileCryptForm" id="ID=195" metaclass="Namespace Diagram" file="default.txvpck.html">
+      <Property name="defaultDiagram">true</Property>
+      <DiagramReference id="ID=295" element="ID=193" metaclass="Class">
+        <Property name="Gradient ON">False</Property>
+        <Property name="Persistent">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Sealed">False</Property>
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Extends">Vcl.Forms.TForm</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=296" element="ID=194" metaclass="Module">
+        <Property name="Gradient Mode">Vertical</Property>
+        <Property name="Gradient ON">False</Property>
+        <Property name="Color Area">Whole Shape</Property>
+        <Property name="Gradient color 2">255, 255, 255</Property>
+        <Property name="Gradient color 1">255, 255, 255</Property>
+        <DiagramReference id="ID=315" element="ID=237" metaclass="Association Link">
+          <Property name="Type">association</Property>
+          <Property name="Directed">False</Property>
+          <Property name="Supplier">TForm2</Property>
+          <Property name="Client">Form2</Property>
+        </DiagramReference>
+      </DiagramReference>
+    </Diagram>
+    <Classifier name="TForm2" id="ID=193" type="Class" visibility="public">
+      <Property name="Persistent">False</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Sealed">False</Property>
+      <Property name="Extends">Vcl.Forms.TForm</Property>
+      <Extends idref="ID=105" refFN="Vcl.Forms.TForm" doom="true" />
+      <Uses>
+        <Use element="ID=236" type="field_type" />
+      </Uses>
+      <Field fieldType="Field" elementName="ButtonOK" id="ID=198" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ButtonCancel" id="ID=199" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Field fieldType="Field" elementName="Panel1" id="ID=200" type="TPanel" systemType="TPanel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TPanel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelInfo" id="ID=201" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelIn" id="ID=202" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelOut" id="ID=203" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelPathIn" id="ID=204" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelPathOut" id="ID=205" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="EditOffset" id="ID=206" type="TEdit" systemType="TEdit" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TEdit</Property>
+      </Field>
+      <Field fieldType="Field" elementName="LabelOffset" id="ID=207" type="TLabel" systemType="TLabel" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TLabel</Property>
+      </Field>
+      <Field fieldType="Field" elementName="UpDownFileOffset" id="ID=208" type="TUpDown" systemType="TUpDown" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TUpDown</Property>
+      </Field>
+      <Field fieldType="Field" elementName="OpenFileCrypted" id="ID=209" type="TOpenDialog" systemType="TOpenDialog" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TOpenDialog</Property>
+      </Field>
+      <Field fieldType="Field" elementName="SaveFileCrypted" id="ID=210" type="TSaveDialog" systemType="TSaveDialog" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TSaveDialog</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ButtonSelectInFile" id="ID=211" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Field fieldType="Field" elementName="ButtonSelectOutFile" id="ID=212" type="TButton" systemType="TButton" isPrimitive="false" visibility="public">
+        <Property name="Const">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Type">TButton</Property>
+      </Field>
+      <Method id="ID=213" name="ButtonSelectInFileClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=213_63079676" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик события для кнопки Выбрать исходный файл&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=213" type="" isPrimitive="true" />
+      </Method>
+      <Method id="ID=214" name="ButtonSelectOutFileClick" isSubroutine="true" visibility="public">
+        <Parameter elementName="Sender" id="ID3=214_9180116" type="TObject" systemType="TObject" isPrimitive="false" />
+        <Property name="Override">False</Property>
+        <Property name="Class">False</Property>
+        <Property name="Abstract">False</Property>
+        <Property name="Virtual">False</Property>
+        <Property name="summary">Обработчик события для кнопки Выбрать файл-результат&lt;br /&gt;</Property>
+        <Property name="Reintroduce">False</Property>
+        <Property name="Final">False</Property>
+        <ReturnType id="ID=214" type="" isPrimitive="true" />
+      </Method>
+    </Classifier>
+    <Classifier name="globals FileCryptForm" id="ID=194" type="Module" visibility="public">
+      <Link targetName="Form2" id="ID=237" metaclass="Association Link" idref="ID=193">
+        <Property name="Type">association</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Supplier">TForm2</Property>
+        <Property name="Client">Form2</Property>
+      </Link>
+      <Uses />
+      <Field fieldType="Field" elementName="Form2" id="ID=236" typeref="ID=193" type="TForm2" isPrimitive="false" visibility="internal">
+        <Property name="Const">False</Property>
+        <Property name="Type">TForm2</Property>
+      </Field>
+    </Classifier>
+  </Package>
+</Model>
